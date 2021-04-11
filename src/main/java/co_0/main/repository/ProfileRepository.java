@@ -1,6 +1,6 @@
-package com0.main.repository;
+package co_0.main.repository;
 
-import com0.main.domain.Profile;
+import co_0.main.domain.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com0.main.domain;
+package co_0.main.domain;
 
 import lombok.Builder;
 import lombok.Getter;

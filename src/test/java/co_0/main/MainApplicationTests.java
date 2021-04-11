@@ -1,4 +1,4 @@
-package com0.main;
+package co_0.main;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,7 +1,7 @@
-package com0.main.controller;
+package co_0.main.controller;
 
-import com0.main.domain.Profile;
-import com0.main.service.ProfileService;
+import co_0.main.domain.Profile;
+import co_0.main.service.ProfileService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
@@ -28,7 +28,6 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 import java.time.LocalDateTime;
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/api/profiles")
 public class ProfileRestController {
@@ -40,10 +39,11 @@ public class ProfileRestController {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getProfile(){
+    public ResponseEntity<?> getProfile() {
         List<Profile> profiles = profileService.findProfileList();
         return ResponseEntity.ok(profiles);
     }
+
     @PostMapping
     public ResponseEntity<?> postProfile(@RequestBody Profile profile) {
         profile.setCreatedDate((LocalDateTime.now()));
@@ -52,7 +52,7 @@ public class ProfileRestController {
     }
 
     @PutMapping("/{idx}")
-    public ResponseEntity<?> putProfile(@PathVariable("idx")Long idx, @RequestBody Profile profile) {
+    public ResponseEntity<?> putProfile(@PathVariable("idx") Long idx, @RequestBody Profile profile) {
         Profile persistProfile = profileService.profileGetOne(idx);
         persistProfile.update(profile);
         profileService.newProfile(persistProfile);
@@ -60,7 +60,7 @@ public class ProfileRestController {
     }
 
     @DeleteMapping("/{idx}")
-    public ResponseEntity<?> deleteProfile(@PathVariable("idx")Long idx) {
+    public ResponseEntity<?> deleteProfile(@PathVariable("idx") Long idx) {
         profileService.deleteProfile(idx);
         return new ResponseEntity<>("{}", HttpStatus.OK);
     }

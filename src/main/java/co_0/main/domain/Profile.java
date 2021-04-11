@@ -1,4 +1,4 @@
-package com0.main.domain;
+package co_0.main.domain;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -52,5 +52,17 @@ public class Profile implements Serializable {
         this.network = profile.getNetwork();
         this.username = profile.getUsername();
         this.url = profile.getUrl();
+    }
+
+    private String getUrl() {
+        return this.url;
+    }
+
+    private String getUsername() {
+        return this.network;
+    }
+
+    private String getNetwork() {
+        return this.network;
     }
 }
