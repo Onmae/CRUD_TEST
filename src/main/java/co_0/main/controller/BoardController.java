@@ -1,16 +1,11 @@
 package co_0.main.controller;
 
 import co_0.main.domain.Basic;
-import co_0.main.domain.Profile;
 import co_0.main.service.BasicService;
 import co_0.main.service.ProfileService;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDateTime;
 
 @Controller
 public class BoardController {

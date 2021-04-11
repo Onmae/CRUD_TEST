@@ -18,6 +18,11 @@ import java.time.LocalDateTime;
 
 public class Profile implements Serializable {
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -52,17 +57,5 @@ public class Profile implements Serializable {
         this.network = profile.getNetwork();
         this.username = profile.getUsername();
         this.url = profile.getUrl();
-    }
-
-    private String getUrl() {
-        return this.url;
-    }
-
-    private String getUsername() {
-        return this.network;
-    }
-
-    private String getNetwork() {
-        return this.network;
     }
 }
